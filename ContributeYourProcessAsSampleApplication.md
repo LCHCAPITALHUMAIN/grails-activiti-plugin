@@ -1,0 +1,15 @@
+# Introduction #
+First of all, we highly appreciate that you are consider to contribute your process and other related artifacts as sample application of the Grails Activiti Plugin. Below is step-by-step guidelines how you can perform such contribution.
+
+# 4 Steps to contribute your process as sample application of the plugin #
+1. Register as member of the project's discussion forum at http://groups.google.com/group/grails-activiti-plugin and tell us overview of the process you intend to contribute.
+
+2. Before you can commit your process and other related artifacts to the project repository, you need to complete the following items:
+  * Define a process or package name (e.g.: vacationRequest) for your process and structure your process in a directory of the same name you defined (each word separated by "-", e.g.: [vacation-request](http://code.google.com/p/grails-activiti-plugin/source/browse/#hg/src/sample-app/vacation-request)) under /src/sample-app directory and the internal structure of the directory must be same with normal grails project structure, for example:
+> ![http://grails-activiti-plugin.googlecode.com/hg/docs/images/contribute/sampleapp-directory-structure.jpg](http://grails-activiti-plugin.googlecode.com/hg/docs/images/contribute/sampleapp-directory-structure.jpg)
+  * You need to provide installation and uninstallation script which known as install-xxxx-sampleapp (e.g.: [install-vacation-request-sampleapp](http://code.google.com/p/grails-activiti-plugin/source/browse/scripts/InstallVacationRequestSampleapp.groovy)) and uinstall-xxxx-sampleapp (e.g.: [uninstall-vacation-request-sampleapp](http://code.google.com/p/grails-activiti-plugin/source/browse/scripts/UninstallVacationRequestSampleapp.groovy)) to install and uninstall your sample application. If your sample application overwrite grails common files, make sure your installation script prompt the user.
+  * The pre-defined data of sample application must be initialized in it's own BootStrap class prefix with defined process name such as [VacationRequestBootStrap.groovy](http://code.google.com/p/grails-activiti-plugin/source/browse/src/sample-app/vacation-request/grails-app/conf/VacationRequestBootStrap.groovy)
+
+3. Send the complete source code of plugin project included the sample application for review. If your sample application is working fine, the project owner will grant you the commit right for the project repository.
+
+4. Finally, create a wiki page to describe your sample application. All images of your documentation should store under \docs\images\xxxx-sampleapp directory (e.g.: [vacation-request-sampleapp](http://code.google.com/p/grails-activiti-plugin/source/browse/#hg/docs/images/vacation-request-sampleapp)). You can refer to [Vacation Request Sample Application wiki page](VacationRequestSampleApplication.md) as an example.
